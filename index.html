@@ -134,7 +134,7 @@ const callGemini=async(history,apiKey)=>{
   }));
 
   const res=await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${apiKey}`,
+    `https://generativelanguage.googleapis.com/v1/models/${GEMINI_MODEL}:generateContent?key=${apiKey}`,
     {
       method:'POST',
       headers:{'Content-Type':'application/json'},
@@ -277,7 +277,7 @@ function KeyModal({onSave,existingKey}){
           marginBottom:'16px',
           fontSize:'11px',color:'#34A853',lineHeight:1.7
         }}>
-          ✅ Gemini 2.0 Flash ফ্রি টায়ার:<br/>
+          ✅ Gemini 1.5 Flash ফ্রি টায়ার:<br/>
           প্রতিদিন ১,৫০০ অনুরোধ | প্রতি মিনিটে ১৫টি
         </div>
 
