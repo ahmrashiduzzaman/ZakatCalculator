@@ -68,7 +68,7 @@ const LS_KEY='asf_zakat_gemini_key';
 const GOLD_PG=8000, SILVER_PG=100;
 const NISAB=Math.round(612.36*SILVER_PG);
 const NISAB_AU=Math.round(87.48*GOLD_PG);
-const GEMINI_MODEL='gemini-1.5-flash';
+
 
 /* ═══════════════════════════════════════════
    BACKGROUND PATTERN
@@ -134,7 +134,7 @@ const callGemini=async(history,apiKey)=>{
   }));
 
   const res=await fetch(
-    `https://generativelanguage.googleapis.com/v1/models/${GEMINI_MODEL}:generateContent?key=${apiKey}`,
+    'https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key='+apiKey,
     {
       method:'POST',
       headers:{'Content-Type':'application/json'},
